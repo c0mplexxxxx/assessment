@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useRef } from "react";
+import "./App.scss";
+import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
 
 function App() {
+  const database = [
+    {
+      email: "vinhdeptrai@gmail.com",
+      password: "hehehe"
+    },
+    {
+      email: "example@kyanon.digital",
+      password: "password123"
+    }
+  ];
+  const [isLoggedIn, setLogIn] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {isLoggedIn ? <Profile/> : <Login db={database} setLogIn={setLogIn}/>}
     </div>
   );
 }

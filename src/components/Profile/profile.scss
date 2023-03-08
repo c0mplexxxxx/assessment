@@ -1,0 +1,76 @@
+.profile-wrapper {
+  position: relative;
+}
+.profile {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  background-color: #f4f4f4;
+  &-container {
+    padding: 40px 28px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__heading {
+    width: 100%;
+  }
+  label {
+    color: #b7b7b7;
+  }
+  .input-field {
+    padding-bottom: 24px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    .input-label {
+      padding-bottom: 8px;
+    }
+    input {
+      width: 100%;
+      border: 1px solid #b7b7b7;
+      outline: none;
+      padding: 12px 12px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.profile__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-btn { 
+  button {
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    &:last-child {
+      margin-left: 16px;
+    }
+  }
+  &.cancel > button {
+    color: #2c08d9;
+    background-color: #e4e4e4;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .login-wrapper {
+    height: 100vh
+  }
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+

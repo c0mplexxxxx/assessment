@@ -1,0 +1,15 @@
+.error {
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  padding-top: 8px;
+  display: none;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ div {
+  display: block;
+}
